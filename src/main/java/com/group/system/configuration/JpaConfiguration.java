@@ -47,6 +47,7 @@ public class JpaConfiguration {
 		Properties jpaProperties = new Properties();
 		jpaProperties.put("hibernate.dialect", environment.getRequiredProperty("hibernate.dialect"));
 		jpaProperties.put("hibernate.show_sql", environment.getRequiredProperty("hibernate.show_sql"));
+		jpaProperties.put("hibernate.hbm2ddl.auto", environment.getRequiredProperty("hibernate.hbm2ddl.auto"));
 		entityManagerFactoryBean.setJpaProperties(jpaProperties);
 		return entityManagerFactoryBean;
 	}

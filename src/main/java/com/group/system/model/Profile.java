@@ -14,7 +14,7 @@ public class Profile implements Serializable{
 	private static final long serialVersionUID = 1L;
 
 	@Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy= GenerationType.SEQUENCE)
     @Column(name="profile_id", nullable=false)
     private Integer profileId;
 
