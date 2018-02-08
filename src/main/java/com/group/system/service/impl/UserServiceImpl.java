@@ -2,6 +2,8 @@ package com.group.system.service.impl;
 
 import java.util.List;
 
+import javax.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -20,6 +22,7 @@ public class UserServiceImpl implements UserService, UserDetailsService{
 	@Autowired
 	private UserRepository userRepository;
 	
+	@Transactional
 	@Override
 	public Usuario saveUser(Usuario user) {
 			Usuario userSave = this.userRepository.save(user);
